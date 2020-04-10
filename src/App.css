@@ -1,0 +1,123 @@
+.App {
+  text-align: center;
+  background-color: #080911;
+}
+
+.App-header {
+  background-color: transparent;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  top:0;
+  position:relative;
+  font-family:'Poppins', sans-serif;
+}
+
+.section{
+  background-color: #080911;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  top:0;
+  position:relative;
+  font-family:'Poppins', sans-serif;
+}
+
+
+.project-col{
+  min-width:400;
+  margin:5px;
+}
+
+.footer-container{
+  display:flex;
+  flex-direction:row;
+  justify-content:center;
+  align-content:center;
+}
+
+
+.App-link {
+  color: #61dafb;
+}
+.particles{
+  position:fixed;
+  top:0;
+  left:0;
+  height:100vh;
+  width:100%;
+  z-index:2;
+  background-color: #080911;
+}
+
+.row-flex{
+  display:flex;
+  flex-direction: row;
+  
+}
+.super-center{
+  justify-content: center;
+  align-items:center;
+}
+.row-left-center{
+  justify-content: flex-start;
+  align-items: center;
+  width:100%;
+  display:flex;
+  flex-direction: row;
+}
+.company-logo{
+  height:40px;
+  width:40px;
+  margin-right:5px;
+}
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.icon-container{
+  justify-content: center;
+  align-items:center;
+  display:flex;
+  flex-direction: row;
+}
+.icon:hover{
+  background-color:#be5e36;
+}
+.icon{
+  background-color: white;
+  padding:5px;
+  display:flex;
+  width:60px;
+  height:60px;
+  border-radius:100px;
+  justify-content: center;
+  align-items:center;
+}
+.button:hover{
+  background-color:#be5e36;
+}
+.button{
+  background-color: white;
+  padding:20px;
+  display:flex;
+  min-width:80px;
+  height:60px;
+  border-radius:100px;
+  justify-content: center;
+  align-items:center;
+  color:black;
+  font-size:24px;
+}
