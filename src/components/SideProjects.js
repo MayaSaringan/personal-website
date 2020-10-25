@@ -89,8 +89,8 @@ const SideProjects = (props) => {
                                 src="/browserbuddies.png"
                                 link={"https://devpost.com/software/browser-buddies"}
                             />
-                            <ProjectTile src="/batterymanager.png" />
-                            <ProjectTile src="/passwordgenerator.png" />
+                            <ProjectTile src="/sims4pregnancymod.png" link="https://github.com/MayaSaringan/Sims4-Pregnancy-Adoption-Mod"/>
+                            <ProjectTile src="/raid.png" link="https://github.com/MayaSaringan/raids-shadow-legends-tool" />
                         </div>
                     </Card>
                 </MyContainer>
@@ -134,8 +134,8 @@ const SideProjects = (props) => {
                                 src="/browserbuddies.png"
                                 link={"https://devpost.com/software/browser-buddies"}
                             />
-                            <ProjectTile src="/batterymanager.png" />
-                            <ProjectTile src="/passwordgenerator.png" />
+                            <ProjectTile src="/sims4pregnancymod.png" link="https://github.com/MayaSaringan/Sims4-Pregnancy-Adoption-Mod"/>
+                            <ProjectTile src="/raid.png" link="https://github.com/MayaSaringan/raids-shadow-legends-tool" />
                         </div>
                     </div>
                 </MyContainer2>
