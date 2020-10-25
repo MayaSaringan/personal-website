@@ -39,7 +39,7 @@ const AboutMe = (props) => {
     }, [])
 
     return (
-        <MyPaper elevation={0} id={props.id}>
+        <MyPaper id={props.id}>
                 <Hidden smDown>
                     
             <MyContainer maxWidth="lg">
@@ -84,7 +84,6 @@ const AboutMe = (props) => {
                                             marginRight: 10,
                                         }}
                                     />}
-                                    onClick={() => window.open("./Resume.pdf", "_blank")}
                                 >
                                     RESUME
                                 </MyButton> </div> 
@@ -101,7 +100,6 @@ const AboutMe = (props) => {
                         style={{ height: "100%", padding: 10, background: "inherit",
                         borderColor: "gray",
                         borderWidth: 0,
-                        borderTopWidth:1,
                         borderStyle: "solid",
                         zIndex: 2,  }}
                     >
@@ -126,7 +124,12 @@ const AboutMe = (props) => {
                                 }}
                             >
                                 <div
-                                    style={{ 
+                                    style={{
+                                        padding: 10,
+                                        background: "#0D121E",
+                                        borderColor: "gray",
+                                        borderWidth: 1,
+                                        borderStyle: "solid",
                                         zIndex: 2,
                                     }}
                                 >
@@ -136,7 +139,7 @@ const AboutMe = (props) => {
                                         style={{
                                             color: "white",
                                             fontWeight: "bold",
-                                            fontSize:'1em'
+                                            fontSize:'0.8em'
                                         }}
                                     >
                                         ABOUT ME
@@ -178,19 +181,6 @@ const AboutMe = (props) => {
                                         develop projects in React, for quality of
                                         life apps, or mods for my favorite games.
                                     </p>
-                                    <div> <MyButton variant="outlined"
-                                    startIcon={ <img
-                                        src="https://img.icons8.com/officel/80/000000/open-resume.png"
-                                        style={{
-                                            width: 45,
-                                            height: 45,
-                                            marginRight: 10,
-                                        }}
-                                    />}
-                                    onClick={() => window.open("./Resume.pdf", "_blank")}
-                                >
-                                    RESUME
-                                </MyButton> </div> 
                                 </div>{" "}
                             </div>
                         </div>
@@ -208,7 +198,8 @@ const MyContainer = styled(Container)({
     alignItems: "center",
     flexDirection: "column", 
     justifyContent:'center',
-    height: "100vh",  
+    height: "100vh", 
+    padding:0
 })
 
 const MyContainer2 = styled(Container)({
@@ -217,14 +208,11 @@ const MyContainer2 = styled(Container)({
     flexDirection: "column", 
     justifyContent:'flex-start',
     height: "100vh", 
-    padding:0,
-    borderWidth:0,
-    boxShadow:'none'
+    padding:0
 })
 const MyPaper = styled(Paper)({
     background: "inherit",
     color: "white",
-    elevation:0
 })
 
 const MyButton = styled(Button)({
@@ -290,13 +278,9 @@ const cardStyles = makeStyles(() => ({
     },
     coverMobile: {
         width: "100%",
-        height: '7em',
+        height: "40%",
         flexGrow: 1,
         position: "absolute",
-        borderColor: "gray",
-        borderWidth: 1,
-        borderStyle: "solid",
-        zIndex: 2,
     },
     coverDesktop: { width: "25em", height: "3em" },
 }))

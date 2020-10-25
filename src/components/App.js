@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react"
 import "./styles/App.css"
-import "bootstrap/dist/css/bootstrap.min.css"
-import "typeface-poppins"
+import "bootstrap/dist/css/bootstrap.min.css" 
 import NavBar from "./NavBar"
 import Home from "./Home"
 import AboutMe from "./AboutMe"

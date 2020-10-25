@@ -37,6 +37,7 @@ const Home = (props) => {
     }
     useEffect(() => {
         handleChange()
+        
     }, [])
     const scrollWithOffset = (el) => {
         const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset

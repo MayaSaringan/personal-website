@@ -28,7 +28,6 @@ import Slide from "react-reveal/Slide"
 import Button from "@material-ui/core/Button"
 
 import YouTube from "react-youtube"
-
 const WorkCard = (props) => {
     if (!props.mobile) {
         return (
@@ -85,7 +84,6 @@ const WorkCard = (props) => {
                                     flex: 0,
                                 }}
                             >
-                                {" "}
                                 <div
                                     style={{
                                         background: "gray",
