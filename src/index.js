@@ -4,7 +4,7 @@ import "./index.css"
 import App from "./components/App"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 
-import './components/styles/App.css'
+import "./components/styles/App.css"
 ReactDOM.render(
     <Router>
         <Switch>

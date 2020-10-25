@@ -9,7 +9,7 @@ import {
     createMuiTheme,
 } from "@material-ui/core/styles"
 
-import { Link, animateScroll as scroll } from "react-scroll"
+import { ScrollLink } from "./common/Link"
 import MenuIcon from "@material-ui/icons/Menu"
 
 import Container from "@material-ui/core/Container"
@@ -20,7 +20,7 @@ import Card from "@material-ui/core/Card"
 
 import CardContent from "@material-ui/core/CardContent"
 import CardMedia from "@material-ui/core/CardMedia"
-import IconImageButton from "./IconImageButton"
+import IconImageButton from "./common/IconImageButton"
 import Typography from "@material-ui/core/Typography"
 
 import Fade from "@material-ui/core/Fade"
@@ -37,7 +37,6 @@ const Home = (props) => {
     }
     useEffect(() => {
         handleChange()
-        
     }, [])
     const scrollWithOffset = (el) => {
         const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset
@@ -48,7 +47,6 @@ const Home = (props) => {
         <MyPaper id={props.id}>
             <MyContainer maxWidth="lg">
                 <Hidden smDown>
-                    {" "}
                     <Card className={cardClasses.root}>
                         <CardContent className={cardClasses.content}>
                             <ThemeProvider
@@ -95,12 +93,7 @@ const Home = (props) => {
                                 </div>
                             </div>
                             <div>
-                                <NavHashLink
-                                    className="button-link"
-                                    smooth
-                                    to="/#about"
-                                    scroll={(el) => scrollWithOffset(el)}
-                                >
+                                <ScrollLink link={"about"} duration={400}>
                                     <MyButton
                                         variant="outlined"
                                         startIcon={
@@ -116,92 +109,77 @@ const Home = (props) => {
                                     >
                                         ABOUT ME
                                     </MyButton>
-                                </NavHashLink>
+                                </ScrollLink>
                             </div>
                         </CardContent>
                     </Card>
                 </Hidden>
                 <Hidden mdUp>
-                    {" "}
                     <Card className={cardClasses.root2}>
                         <CardContent className={cardClasses.content}>
                             <Typography className={cardClasses.title}>
                                 Maya Saringan
                             </Typography>
-                            <div className={cardClasses.subRow}>
-                                <div
-                                    className={{
-                                        height: "100%",
-                                        background: "grey",
-                                        width: 10,
-                                        marginRight: 20,
-                                    }}
-                                />
-                                <div>
-                                    <Typography
-                                        variant="h4"
-                                        component="h2"
-                                        className={cardClasses.subtitle1}
-                                    >
-                                        Software Developer
-                                    </Typography>
-                                    <Typography
-                                        variant="h4"
-                                        component="h2"
-                                        className={cardClasses.multiColorString}
-                                    >
-                                        at
-                                        <div className={cardClasses.subtitle2}>
-                                            &nbsp; Youi.TV
-                                        </div>
-                                    </Typography>
-                                </div>
-                            </div>
-                            <div>
-                                <NavHashLink
-                                    className="button-link"
-                                    smooth
-                                    to="/#about"
-                                    scroll={(el) => scrollWithOffset(el)}
-                                >
-                                    <MyButton
-                                        variant="outlined"
-                                        startIcon={
-                                            <img
-                                                src="https://img.icons8.com/bubbles/100/000000/girl-with-chemical-test-tube.png"
-                                                style={{
-                                                    width: 65,
-                                                    height: 65,
-                                                    marginRight: 10,
-                                                }}
-                                            />
-                                        }
-                                    >
-                                        ABOUT ME
-                                    </MyButton>
-                                </NavHashLink>
-                            </div>
-                        </CardContent>
-
-                        <CardContent className={cardClasses.content}>
-                            <ThemeProvider
-                                theme={createMuiTheme({ width: 80, height: 80 })}
+                            <Typography
+                                variant="h4"
+                                component="h2"
+                                className={cardClasses.subtitle1}
                             >
-                                <div style={{ display: "flex" }}>
-                                    <IconImageButton
-                                        link="https://github.com/MayaSaringan"
-                                        imgSrc="https://img.icons8.com/doodle/192/000000/github--v1.png"
-                                    />
-                                    <IconImageButton
-                                        link="https://www.linkedin.com/in/msaringan/"
-                                        imgSrc="https://img.icons8.com/doodle/192/000000/linkedin-circled.png"
-                                    />
-                                    <IconImageButton
-                                        link="mailto:contact@mayasaringan.me"
-                                        imgSrc="https://img.icons8.com/doodle/96/000000/mail-with-wings.png"
-                                    />
+                                Software Developer
+                            </Typography>
+                            <Typography
+                                variant="h4"
+                                component="h2"
+                                className={cardClasses.multiColorString}
+                            >
+                                at
+                                <div className={cardClasses.subtitle2}>
+                                    &nbsp; Youi.TV
                                 </div>
-                            </ThemeProvider>
+                            </Typography>
+
+                            <div>
+                                <div>
+                                    <ScrollLink link={"about"} duration={400}>
+                                        <MyButton
+                                            variant="outlined"
+                                            startIcon={
+                                                <img
+                                                    src="https://img.icons8.com/bubbles/100/000000/girl-with-chemical-test-tube.png"
+                                                    style={{
+                                                        width: 65,
+                                                        height: 65,
+                                                        marginRight: 10,
+                                                    }}
+                                                />
+                                            }
+                                        >
+                                            ABOUT ME
+                                        </MyButton>
+                                    </ScrollLink>
+                                    <ThemeProvider
+                                        theme={createMuiTheme({
+                                            width: 80,
+                                            height: 80,
+                                        })}
+                                    >
+                                        <div style={{ display: "flex" }}>
+                                            <IconImageButton
+                                                link="https://github.com/MayaSaringan"
+                                                imgSrc="https://img.icons8.com/doodle/192/000000/github--v1.png"
+                                            />
+                                            <IconImageButton
+                                                link="https://www.linkedin.com/in/msaringan/"
+                                                imgSrc="https://img.icons8.com/doodle/192/000000/linkedin-circled.png"
+                                            />
+                                            <IconImageButton
+                                                link="mailto:contact@mayasaringan.me"
+                                                imgSrc="https://img.icons8.com/doodle/96/000000/mail-with-wings.png"
+                                            />
+                                        </div>
+                                    </ThemeProvider>
+                                </div>
+                            </div>
                         </CardContent>
                     </Card>
                 </Hidden>
@@ -217,25 +195,24 @@ const MyContainer = styled(Container)({
     justifyContent: "center",
     height: "100vh",
     marginTop: -50,
+
+    fontFamily: "Quicksand",
 })
 
 const MyPaper = styled(Paper)({
     background: "inherit",
     color: "white",
     minHeight: 800,
+
+    fontFamily: "Quicksand",
 })
 
 const MyButton = styled(Button)({
-    padding: 5,
-    paddingLeft: 25,
-    paddingRight: 25,
     color: "white",
     background: "inherit",
     textDecoration: "none",
-    //  borderWidth: 1.5,
     borderRadius: 60,
     borderColor: "#466989",
-    //  borderStyle: "solid",
     fontSize: 28,
     "&:hover": {
         //  background: "linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)",
@@ -248,6 +225,9 @@ const MyButton = styled(Button)({
         outline: "none",
         textDecoration: "none",
     },
+
+    fontFamily: "Quicksand",
+    zIndex: 2,
 })
 
 const cardStyles = makeStyles(() => ({
@@ -258,6 +238,8 @@ const cardStyles = makeStyles(() => ({
         "&:hover": {
             color: "linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)",
         },
+
+        fontFamily: "Quicksand",
     },
     root2: {
         display: "flex",
@@ -267,9 +249,11 @@ const cardStyles = makeStyles(() => ({
         "&:hover": {
             color: "linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)",
         },
+
+        fontFamily: "Quicksand", 
+        alignItems: "center",
     },
-    content: {
-        flex: "1 0 auto",
+    content: { 
         color: "white",
         flexDirection: "column",
         display: "flex",
@@ -288,12 +272,18 @@ const cardStyles = makeStyles(() => ({
     title: {
         fontWeight: "bold",
         fontSize: "1em",
+
+        fontFamily: "Quicksand",
     },
     subtitle1: {
         color: "#04B877",
+
+        fontFamily: "Quicksand",
     },
     subtitle2: {
         color: "#D30000",
+
+        fontFamily: "Quicksand",
     },
     multiColorString: {
         display: "flex",

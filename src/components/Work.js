@@ -9,18 +9,11 @@ import {
     createMuiTheme,
 } from "@material-ui/core/styles"
 
-import { Link, animateScroll as scroll } from "react-scroll"
-import MenuIcon from "@material-ui/icons/Menu"
-
 import Container from "@material-ui/core/Container"
 
 import Paper from "@material-ui/core/Paper"
 
 import Card from "@material-ui/core/Card"
-
-import CardContent from "@material-ui/core/CardContent"
-import CardMedia from "@material-ui/core/CardMedia"
-import IconImageButton from "./IconImageButton"
 import Typography from "@material-ui/core/Typography"
 
 import Hidden from "@material-ui/core/Hidden"
@@ -256,11 +249,7 @@ const Work = (props) => {
                                 />
                             }
                         >
-                            I am a recent graduate of Carleton University with a
-                            B.C.S Honours. Through my work I have gained experience
-                            in C++ and React Native development. Outside of work, I
-                            usually develop projects in React, for quality of life
-                            apps, or mods for my favorite games.{" "}
+                            Contributed to the React Native layer of the Youi.TV engine SDK. Experienced in automated testing for C++ and react. Worked in a team following the Scrum framework. Experienced in peer code reviews
                         </WorkCard>
                         <WorkCard
                             mobile={false}
@@ -329,12 +318,7 @@ const Work = (props) => {
                                     />
                                 }
                             >
-                                I am a recent graduate of Carleton University with a
-                                B.C.S Honours. Through my work I have gained
-                                experience in C++ and React Native development.
-                                Outside of work, I usually develop projects in React,
-                                for quality of life apps, or mods for my favorite
-                                games.{" "}
+                                Contributed to the React Native layer of the Youi.TV engine SDK. Experienced in automated testing for C++ and react. Worked in a team following the Scrum framework. Experienced in peer code reviews
                             </WorkCard>
                             <WorkCard
                                 mobile={true}

@@ -18,32 +18,29 @@ import ListItemIcon from "@material-ui/core/ListItemIcon"
 import ListItemText from "@material-ui/core/ListItemText"
 import InboxIcon from "@material-ui/icons/MoveToInbox"
 import MailIcon from "@material-ui/icons/Mail"
-
+import { ScrollLink } from "./common/Link"
 import clsx from "clsx"
 const drawerWidth = 240
 const MyButton = ({ title, imgSrc, link }) => {
     const [hovered, setHovered] = useState(false)
     let classes = buttonStyles()
     return (
-        <Button
-            onMouseEnter={() => setHovered(!hovered)}
-            onMouseLeave={() => setHovered(!hovered)}
-            className={classes.button}
-            variant="contained"
-            startIcon={
-                <img
-                    src={imgSrc}
-                    className={`button-img${hovered ? `-hovered` : ``}`}
-                />
-            }
-            onClick={() =>
-                link.includes("./")
-                    ? window.open(link)
-                    : (window.location.hash = link)
-            }
-        >
-            <p className={`title${hovered ? `-hovered` : ``}`}>{title}</p>
-        </Button>
+        <ScrollLink link={link} duration={400}>
+            <Button
+                onMouseEnter={() => setHovered(!hovered)}
+                onMouseLeave={() => setHovered(!hovered)}
+                className={classes.button}
+                variant="contained"
+                startIcon={
+                    <img
+                        src={imgSrc}
+                        className={`button-img${hovered ? `-hovered` : ``}`}
+                    />
+                }
+            >
+                <p className={`title${hovered ? `-hovered` : ``}`}>{title}</p>
+            </Button>
+        </ScrollLink>
     )
 }
 
@@ -57,6 +54,7 @@ const MyAppBar = styled(AppBar)({
     boxShadow: "none",
     position: "sticky",
 
+    fontFamily: "Quicksand",
     "&:hover": {
         //  borderImage:'none',
         //   boxShadow: "2px 3px 7px 0px rgba(0,0,0,0.64)",
@@ -65,6 +63,8 @@ const MyAppBar = styled(AppBar)({
 const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
+
+        fontFamily: "Quicksand",
     },
     menuButton: {
         marginRight: theme.spacing(2),
@@ -79,6 +79,8 @@ const drawerStyles = makeStyles(() => ({
         borderStyle: "solid",
         borderColor: "gray",
         color: "white",
+
+        fontFamily: "Quicksand",
     },
 }))
 const NavBar = () => {
@@ -146,21 +148,21 @@ const NavBar = () => {
                         <MyButton
                             title="ABOUT ME"
                             imgSrc="https://img.icons8.com/office/80/000000/cool.png"
-                            link="#about"
+                            link="about"
                         />
                     </ListItem>
                     <ListItem button>
                         <MyButton
                             title="WORK"
                             imgSrc="https://img.icons8.com/doodle/96/000000/home-office.png"
-                            link="#work"
+                            link="work"
                         />
                     </ListItem>
                     <ListItem button>
                         <MyButton
                             title="PROJECTS"
                             imgSrc="https://img.icons8.com/dusk/64/000000/innovation.png"
-                            link="#projects"
+                            link="projects"
                         />
                     </ListItem>
                     <ListItem button>
@@ -179,7 +181,7 @@ const NavBar = () => {
                 unmountOnExit
                 timeout={1000}
             >
-                <MyAppBar position="sticky">
+                <MyAppBar id="appbar" position="sticky">
                     <Toolbar className="test2">
                         <Hidden mdUp>
                             <IconButton
@@ -208,17 +210,17 @@ const NavBar = () => {
                                 <MyButton
                                     title="ABOUT ME"
                                     imgSrc="https://img.icons8.com/office/80/000000/cool.png"
-                                    link="#about"
+                                    link="about"
                                 />
                                 <MyButton
                                     title="WORK"
                                     imgSrc="https://img.icons8.com/doodle/96/000000/home-office.png"
-                                    link="#work"
+                                    link="work"
                                 />
                                 <MyButton
                                     title="PROJECTS"
                                     imgSrc="https://img.icons8.com/dusk/64/000000/innovation.png"
-                                    link="#projects"
+                                    link="projects"
                                 />
                                 <MyButton
                                     title="RESUME"
@@ -244,6 +246,8 @@ const buttonStyles = makeStyles(() => ({
         boxShadow: "none",
         borderRadius: 60,
         fontSize: 28,
+
+        fontFamily: "Quicksand",
         "&:hover": {
             background: "transparent",
             boxShadow: "none",

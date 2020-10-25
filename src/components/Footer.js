@@ -20,7 +20,7 @@ import Card from "@material-ui/core/Card"
 
 import CardContent from "@material-ui/core/CardContent"
 import CardMedia from "@material-ui/core/CardMedia"
-import IconImageButton from "./IconImageButton"
+import IconImageButton from "./common/IconImageButton"
 import Typography from "@material-ui/core/Typography"
 
 import Fade from "@material-ui/core/Fade"
