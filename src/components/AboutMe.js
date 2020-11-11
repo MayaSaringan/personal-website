@@ -17,6 +17,7 @@ import Hidden from "@material-ui/core/Hidden"
 import Slide from "react-reveal/Slide"
 import Button from "@material-ui/core/Button"
 
+import {   Link } from "./common/Link"
 const AboutMe = (props) => {
     const cardClasses = cardStyles()
     const [checked, setChecked] = React.useState(false)
@@ -108,22 +109,23 @@ const AboutMe = (props) => {
                                     mods for my favorite games.
                                 </p>
                                 <div>
-                                    {" "}
-                                    <MyButton
-                                        variant="outlined"
-                                        startIcon={
-                                            <img
-                                                src="https://img.icons8.com/officel/80/000000/open-resume.png"
-                                                style={{
-                                                    width: 45,
-                                                    height: 45,
-                                                    marginRight: 10,
-                                                }}
-                                            />
-                                        }
-                                    >
-                                        RESUME
-                                    </MyButton>{" "}
+                                    <Link link="./Resume.pdf">
+                                        <MyButton
+                                            variant="outlined"
+                                            startIcon={
+                                                <img
+                                                    src="https://img.icons8.com/officel/80/000000/open-resume.png"
+                                                    style={{
+                                                        width: 45,
+                                                        height: 45,
+                                                        marginRight: 10,
+                                                    }}
+                                                />
+                                            }
+                                        >
+                                            RESUME
+                                        </MyButton>
+                                    </Link>
                                 </div>
                             </div>
                         </Card>
@@ -199,7 +201,7 @@ const AboutMe = (props) => {
                                     <CardMedia
                                         className={cardClasses.coverMobile}
                                         image="./kidme.jpeg"
-                                        title="Live from space album cover"
+                                        title="Live frrom space album cover"
                                     />
                                 </div>
                                 <div
@@ -220,7 +222,24 @@ const AboutMe = (props) => {
                                         develop projects in React, for quality of
                                         life apps, or mods for my favorite games.
                                     </p>
-                                </div>{" "}
+                                    <Link link="./Resume.pdf">
+                                        <MyButton
+                                            variant="outlined"
+                                            startIcon={
+                                                <img
+                                                    src="https://img.icons8.com/officel/80/000000/open-resume.png"
+                                                    style={{
+                                                        width: 45,
+                                                        height: 45,
+                                                        marginRight: 10,
+                                                    }}
+                                                />
+                                            }
+                                        >
+                                            RESUME
+                                        </MyButton>
+                                    </Link>
+                                </div>
                             </div>
                         </div>
                     </Card>

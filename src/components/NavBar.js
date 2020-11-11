@@ -18,14 +18,15 @@ import ListItemIcon from "@material-ui/core/ListItemIcon"
 import ListItemText from "@material-ui/core/ListItemText"
 import InboxIcon from "@material-ui/icons/MoveToInbox"
 import MailIcon from "@material-ui/icons/Mail"
-import { ScrollLink } from "./common/Link"
+import { ScrollLink, Link } from "./common/Link"
 import clsx from "clsx"
 const drawerWidth = 240
-const MyButton = ({ title, imgSrc, link }) => {
+const MyButton = ({ title, imgSrc, link, scrolling }) => {
     const [hovered, setHovered] = useState(false)
     let classes = buttonStyles()
+    let LinkClass = scrolling ? ScrollLink : Link
     return (
-        <ScrollLink link={link} duration={400}>
+        <LinkClass link={link} duration={400}>
             <Button
                 onMouseEnter={() => setHovered(!hovered)}
                 onMouseLeave={() => setHovered(!hovered)}
@@ -40,7 +41,7 @@ const MyButton = ({ title, imgSrc, link }) => {
             >
                 <p className={`title${hovered ? `-hovered` : ``}`}>{title}</p>
             </Button>
-        </ScrollLink>
+        </LinkClass>
     )
 }
 
@@ -149,6 +150,7 @@ const NavBar = () => {
                             title="ABOUT ME"
                             imgSrc="https://img.icons8.com/office/80/000000/cool.png"
                             link="about"
+                            scrolling
                         />
                     </ListItem>
                     <ListItem button>
@@ -156,6 +158,7 @@ const NavBar = () => {
                             title="WORK"
                             imgSrc="https://img.icons8.com/doodle/96/000000/home-office.png"
                             link="work"
+                            scrolling
                         />
                     </ListItem>
                     <ListItem button>
@@ -163,6 +166,7 @@ const NavBar = () => {
                             title="PROJECTS"
                             imgSrc="https://img.icons8.com/dusk/64/000000/innovation.png"
                             link="projects"
+                            scrolling
                         />
                     </ListItem>
                     <ListItem button>
@@ -211,16 +215,19 @@ const NavBar = () => {
                                     title="ABOUT ME"
                                     imgSrc="https://img.icons8.com/office/80/000000/cool.png"
                                     link="about"
+                                    scrolling
                                 />
                                 <MyButton
                                     title="WORK"
                                     imgSrc="https://img.icons8.com/doodle/96/000000/home-office.png"
                                     link="work"
+                                    scrolling
                                 />
                                 <MyButton
                                     title="PROJECTS"
                                     imgSrc="https://img.icons8.com/dusk/64/000000/innovation.png"
                                     link="projects"
+                                    scrolling
                                 />
                                 <MyButton
                                     title="RESUME"
