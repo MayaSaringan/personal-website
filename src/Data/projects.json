@@ -1,0 +1,39 @@
+{
+  "descriptions": [
+    {
+      "title": "money-watch",
+      "tags": ["ReactJS", "Express", "Firebase"],
+      "description": "Finance Management app, featuring transaction categorization and tallying.",
+      "preview": "/moneyWatchPreview1.png",
+      "link": "https://github.com/MayaSaringan/money-watch"
+    },
+    {
+      "title": "justDoIt",
+      "tags": ["React Native"],
+      "description": "To-do list app that stores items in local storage.",
+      "preview": null,
+      "link": "https://github.com/MayaSaringan/justDoIt"
+    },
+    {
+      "title": "Farm Fight",
+      "tags": ["GGJ2020 Project", "GameMaker"],
+      "description": "1v1 your friend and race to completely infect the other's farm whilst caring for your own.",
+      "preview": "/farmFight.png",
+      "link": "https://globalgamejam.org/2020/games/farm-fight-6"
+    },
+    {
+      "title": "Sims4 Pregnancy Mod",
+      "tags": ["Python", "Sims4", "Mod"],
+      "description": "My first game mod. Pregnancy mod to allow sims to repopulate in sims4. May be rendered non-functional, or obselete, depending on game updates.",
+      "preview": null,
+      "link": "https://github.com/MayaSaringan/Sims4-Pregnancy-Adoption-Mod"
+    },
+    {
+      "title": "BrowserBuddies",
+      "tags": ["Google Chrome extension", "ReactJS", "Express", "Firebase"],
+      "description": "Share tabs with your friends",
+      "preview": null,
+      "link": "https://devpost.com/software/browser-buddies"
+    }
+  ]
+}

@@ -8,15 +8,20 @@
     Portfolio to showcase Dev work. Visit at mayasaringan.me
   </p>
 
-  [![Netlify Status](https://api.netlify.com/api/v1/badges/bb59fc47-5f6c-4ac7-bdbf-976e5f961093/deploy-status)](https://app.netlify.com/sites/mayasaringan/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/bb59fc47-5f6c-4ac7-bdbf-976e5f961093/deploy-status)](https://app.netlify.com/sites/mayasaringan/deploys)
+
 </p>
 
 ### Built With
-* [ReactJS](https://reactjs.org/)
 
-## Contact
+- [ReactJS](https://reactjs.org/)
+
+### Contact
+
 Maya Saringan - contact@mayasaringan.me
 
 ### Acknowledgements
-* [MaterialUI](https://material-ui.com/)
-* [Icons8](https://icons8.com/)
+
+- [MaterialUI](https://material-ui.com/)
+- [Icons8](https://icons8.com/)
+- [react-scroll](https://www.npmjs.com/package/react-scroll)

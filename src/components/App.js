@@ -1,36 +1,78 @@
-import React, { useEffect, useState } from "react"
-import "./styles/App.css"
-import "bootstrap/dist/css/bootstrap.min.css"
-import NavBar from "./NavBar"
-import Home from "./Home"
-import AboutMe from "./AboutMe"
-import Footer from "./Footer"
-import SideProjects from "./SideProjects"
-import Work from "./Work"
+import React, { useContext, useState, useEffect } from "react";
+import { ThemeProvider } from "@material-ui/core/styles";
+import Paper from "@material-ui/core/Paper";
+import Container from "@material-ui/core/Container";
+import Grid from "@material-ui/core/Grid";
+import CssBaseline from "@material-ui/core/CssBaseline";
+import Navbar, { NavbarContext } from "./Navbar";
+import Welcome from "./Welcome";
+import About from "./About";
+import Work from "./Work";
+import Projects from "./Projects";
+import Footer from "./Footer";
+import ThemeContext, { lightTheme, darkTheme } from "./theme/Theme";
+import CircularProgress from "@material-ui/core/CircularProgress";
+import Page from "./Page";
 
 const App = () => {
-    const [doneLoading, setDoneLoading] = useState(false)
-    useEffect(() => {
-        setTimeout(() => {
-            const loader = document.querySelector(".loader")
-            loader.classList.add("loader--hide")
-            setDoneLoading(!doneLoading)
-        }, 600)
-    }, [])
+  const { light } = useContext(ThemeContext);
+  const [doneLoading, setDoneLoading] = useState(false);
+  useEffect(() => {
+    setTimeout(() => {
+      setDoneLoading(!doneLoading);
+    }, 500);
+  }, []);
+  return (
+    <ThemeProvider theme={light ? lightTheme : darkTheme}>
+      {doneLoading ? <Loaded /> : <Loading />}
+    </ThemeProvider>
+  );
+};
+const Loaded = () => {
+  const welcomeRef = React.createRef();
+  const aboutRef = React.createRef();
+  const projectsRef = React.createRef();
+  const workRef = React.createRef();
+  const [appbarHeight, setAppbarHeight] = useState(null);
+  return (
+    <Paper>
+      <NavbarContext.Provider value={{ appbarHeight, setAppbarHeight }}>
+        <Navbar />
+        <Container maxWidth={"md"}>
+          <Grid alignItems="center" flexDirection="column">
+            <CssBaseline>
+              <Welcome aboutRef={aboutRef} ref={welcomeRef} />
+              <About ref={aboutRef} />
+              <Work ref={workRef} />
+              <Projects ref={projectsRef} />
+              <Footer />
+            </CssBaseline>
+          </Grid>
+        </Container>
+      </NavbarContext.Provider>
+    </Paper>
+  );
+};
+const CircularIndeterminate = () => {
+  const loadingRef = React.createRef();
+  return (
+    <Page fadeIn fadeOut={false} ref={loadingRef}>
+      <CircularProgress color="secondary" />
+    </Page>
+  );
+};
+const Loading = () => {
+  return <CircularIndeterminate />;
+};
 
-    if (!doneLoading) {
-        return null
-    }
-    return (
-        <>
-            <NavBar />
-            <Home id="home" />
-            <AboutMe id="about" />
-            <Work id="work" />
-            <SideProjects id="projects" />
-            <Footer id="footer" />
-        </>
-    )
-}
+const Wrapper = () => {
+  const [light, setLight] = useState(false);
+  const switchTheme = () => setLight(!light);
 
-export default App
+  return (
+    <ThemeContext.Provider value={{ light, switchTheme }}>
+      <App />
+    </ThemeContext.Provider>
+  );
+};
+export default Wrapper;

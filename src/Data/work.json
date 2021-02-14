@@ -1,0 +1,22 @@
+{
+  "descriptions": [
+    {
+      "title": "Software Developer at You.iTV",
+      "tags": ["React Native Team"],
+      "description": "Developed for the You.i Engine, a platform agnostic SDK; Written C++ APIs to implement and extend the React Native framework to use the You.i engine, enabling development for console, TV, desktop and all currently supported platforms by React Native through the You.i SDK.",
+      "logo": "/youi-logo.png",
+      "preview": {
+        "videoId": "aTrGWET6B0M",
+        "opts": { "width": "100%", "height": 200 }
+      },
+      "link": "https://www.youi.tv/"
+    },
+    {
+      "title": "Teaching Assistant at Carleton University",
+      "tags": ["Intro to Software Engineering course"],
+      "description": "Reinforced object oriented programming concepts for students through interactive sessions. Clarified how memory works in C++, as well as demonstrated debugging strategies to students. Graded assignments in a timely fashion and provided feedback.",
+      "logo": "/carleton.png",
+      "link": "https://carleton.ca/"
+    }
+  ]
+}
