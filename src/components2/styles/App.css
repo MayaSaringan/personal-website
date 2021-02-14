@@ -7,7 +7,7 @@
     font-family: "Quicksand", sans-serif;
     min-height: 100vh;
     font-size: calc(42px + (60 - 50) * (100vw - 768px) / (1440 - 768));
-} 
+}
 .App-header {
     background-color: transparent;
     display: flex;

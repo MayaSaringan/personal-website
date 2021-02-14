@@ -25,7 +25,16 @@ const useStyles = makeStyles((theme) => ({
 const IconImageButton = (props) => {
     const classes = useStyles()
     return (
-        <Link link={props.link}>
+        <Link
+            link={props.link}
+            style={{
+                margin: 0,
+                alignItems: "center",
+                justifyContent: "center",
+                display: "flex",
+                ...props.style,
+            }}
+        >
             <IconButton className={classes.root}>
                 <img src={props.imgSrc} className={classes.img} />
             </IconButton>

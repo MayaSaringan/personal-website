@@ -18,8 +18,7 @@ module.exports = {
         "no-console": "warn",
         "no-eval": "error",
         "import/first": "error",
-        "no-mixed-spaces-and-tabs": [2, "smart-tabs"],
-        indent: ["error", 4],
+        indent: ["error", 2],
     },
     parser: "babel-eslint",
 }

@@ -2,10 +2,7 @@ import React, { useState, useEffect } from "react"
 import "./styles/App.css"
 import "bootstrap/dist/css/bootstrap.min.css"
 import "typeface-poppins"
-import {
-    makeStyles,
-    styled,
-} from "@material-ui/core/styles"
+import { makeStyles, styled } from "@material-ui/core/styles"
 
 import Container from "@material-ui/core/Container"
 
@@ -26,7 +23,9 @@ class ProjectTile extends React.Component {
             <a href={this.props.link}>
                 <img
                     src={this.props.src}
-                    style={{ width: 400, padding: 20, borderRadius: 15 }}
+                    width={400}
+                    height={260}
+                    style={{ padding: 20, resizeMode: "center", borderRadius: 15 }}
                 />
             </a>
         )
@@ -86,11 +85,25 @@ const SideProjects = (props) => {
                             }}
                         >
                             <ProjectTile
+                                src="/moneyWatchPreview1.png"
+                                link="https://github.com/MayaSaringan/money-watch"
+                            />
+                            <ProjectTile
                                 src="/browserbuddies.png"
                                 link={"https://devpost.com/software/browser-buddies"}
                             />
-                            <ProjectTile src="/sims4pregnancymod.png" link="https://github.com/MayaSaringan/Sims4-Pregnancy-Adoption-Mod"/>
-                            <ProjectTile src="/raid.png" link="https://github.com/MayaSaringan/raids-shadow-legends-tool" />
+                            <ProjectTile
+                                src="/farmfight.png"
+                                link="https://globalgamejam.org/2020/games/farm-fight-6"
+                            />
+                            <ProjectTile
+                                src="/sims4pregnancymod.png"
+                                link="https://github.com/MayaSaringan/Sims4-Pregnancy-Adoption-Mod"
+                            />
+                            <ProjectTile
+                                src="/raid.png"
+                                link="https://github.com/MayaSaringan/raids-shadow-legends-tool"
+                            />
                         </div>
                     </Card>
                 </MyContainer>
@@ -134,8 +147,14 @@ const SideProjects = (props) => {
                                 src="/browserbuddies.png"
                                 link={"https://devpost.com/software/browser-buddies"}
                             />
-                            <ProjectTile src="/sims4pregnancymod.png" link="https://github.com/MayaSaringan/Sims4-Pregnancy-Adoption-Mod"/>
-                            <ProjectTile src="/raid.png" link="https://github.com/MayaSaringan/raids-shadow-legends-tool" />
+                            <ProjectTile
+                                src="/sims4pregnancymod.png"
+                                link="https://github.com/MayaSaringan/Sims4-Pregnancy-Adoption-Mod"
+                            />
+                            <ProjectTile
+                                src="/raid.png"
+                                link="https://github.com/MayaSaringan/raids-shadow-legends-tool"
+                            />
                         </div>
                     </div>
                 </MyContainer2>

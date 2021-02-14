@@ -2,10 +2,7 @@ import React, { useState, useEffect } from "react"
 import "./styles/App.css"
 import "bootstrap/dist/css/bootstrap.min.css"
 import "typeface-poppins"
-import {
-    makeStyles,
-    styled,
-} from "@material-ui/core/styles"
+import { makeStyles, styled } from "@material-ui/core/styles"
 
 import Container from "@material-ui/core/Container"
 import Paper from "@material-ui/core/Paper"
@@ -17,7 +14,7 @@ import Hidden from "@material-ui/core/Hidden"
 import Slide from "react-reveal/Slide"
 import Button from "@material-ui/core/Button"
 
-import {   Link } from "./common/Link"
+import { Link } from "./common/Link"
 const AboutMe = (props) => {
     const cardClasses = cardStyles()
     const [checked, setChecked] = React.useState(false)
