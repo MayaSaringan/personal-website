@@ -52,7 +52,7 @@ const Description = withTheme(
         Extending React Native to console, desktop and TV as a{" "}
         <span className={classes.primaryColorText}>Software Developer</span>
         &nbsp;at&nbsp;
-        <span className={classes.logoColorText}>You.iTV</span>! I like to apps
+        <span className={classes.logoColorText}>You.iTV</span>! I like to make apps
         for my everyday use. In my spare time, if I am not playing games, I am
         probably watching other people play games
       </Typography>
