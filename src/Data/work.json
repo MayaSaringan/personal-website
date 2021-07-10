@@ -1,9 +1,9 @@
 {
   "descriptions": [
     {
-      "title": "Software Developer at You.iTV",
-      "tags": ["React Native Team"],
-      "description": "Developed for the You.i Engine, a platform agnostic SDK; Written C++ APIs to implement and extend the React Native framework to use the You.i engine, enabling development for console, TV, desktop and all currently supported platforms by React Native through the You.i SDK.",
+      "title": "Software Developer at WarnerMedia",
+      "tags": ["You.i TV Platform", "React Native Team"],
+      "description": "Developed on platform overrides of React-Native, that uses the You.i C++ engine which supports app development for a multitude of TV, mobile, console and desktop platforms. Contributed to external packages built on top of the You.i React-Native override, such as adding new native platform functionality.",
       "logo": "/youi-logo.png",
       "preview": {
         "videoId": "aTrGWET6B0M",

@@ -51,7 +51,7 @@ const Welcome = React.forwardRef((_, ref) => {
                           <Grid
                             container
                             direction="row"
-                            // wrap="nowrap"
+                            wrap="nowrap"
                             alignItems={"center"}
                             spacing={2}
                           >
@@ -92,7 +92,7 @@ const Welcome = React.forwardRef((_, ref) => {
                           <Hidden mdUp>
                             <Grid item>
                               <YouTube
-                                videoId="aTrGWET6B0M"
+                                videoId={desc.preview.videoId}
                                 opts={{ width: "100%", height: 200 }}
                               />
                             </Grid>
@@ -100,9 +100,7 @@ const Welcome = React.forwardRef((_, ref) => {
                         )}
                         <Grid item>
                           <Typography variant="body1">
-                            {`Developed for the You.i Engine, a platform agnostic SDK; ` +
-                              `Written C++ APIs to implement and extend the React Native framework to use the You.i engine, ` +
-                              `enabling development for console, TV, desktop and all currently supported platforms by React Native through the You.i SDK.`}
+                            {desc.description}
                           </Typography>
                         </Grid>
                       </Grid>

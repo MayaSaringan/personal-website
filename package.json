@@ -60,10 +60,7 @@
     "eslint-plugin-react": "^7.21.4",
     "gh-pages": "^2.2.0"
   },
-  "pretter": {
-    "printWidth": 85,
-    "arrowParens": "always",
-    "semi": false,
+  "prettier": {
     "tabWidth": 2
   }
 }
