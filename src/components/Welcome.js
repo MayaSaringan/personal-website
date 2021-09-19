@@ -56,9 +56,7 @@ const Description = withTheme(
         <span className={classes.primaryColorText}>Software Developer</span>
         &nbsp;at&nbsp;
         <span className={classes.WMColor}>WarnerMedia, </span>
-        <span className={classes.YouiColor}>You.i TV Platform</span>! I like to
-        make apps for my everyday use. In my spare time, if I am not playing
-        games, I am probably watching other people play games
+        <span className={classes.YouiColor}>You.i TV Platform</span>! I like making random apps for myself sometimes.
       </Typography>
     );
   })

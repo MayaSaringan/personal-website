@@ -73,27 +73,14 @@ const About = React.forwardRef(({ classes }, ref) => {
             <Grid container direction="column" spacing={3} wrap="noWrap">
               <Grid item>
                 <Typography variant="body1" className={classes.text}>
-                  {`I'm most proficient in C++ and JavaScript, and am experienced in contributing to large codebases. ` +
-                    `For personal projects, I tend to develop in ReactJS or React Native. `}
+                  {`I have extensive experience with the React Native Framework from my contributions in extending platform support at WarnerMedia, You.i TV. ` +
+                    `I have also contributed to React Native packages privately distributed to company clients. ` +
+                    `I am most proficient in C++ and Typescript development, but I also have experience in Swift and Objective-C from work. ` +
+                    `For my side projects, I typically develop in React Native Web / React, utilizing Firebase as the backend because of how quickly I can setup entire applications for any random idea I want to try my hand at.`}
                 </Typography>
               </Grid>
               <Grid item>
                 <Typography variant="body1" className={classes.text}>
-                  {`I graduated with a 2019 B.C.S Honours from Carleton University`}
-                </Typography>
-              </Grid>
-              <Grid item>
-                <Typography className={classes.text}>
-                  {` I have 12000+ hours in RuneScape3, but my favourite game is Rimworld`}
-                </Typography>
-              </Grid>
-              <Grid item>
-                <Typography className={classes.text}>
-                  {`My favourite anime is Attack on Titan. My favourite TV series is Attack on Titan. My favourite anime character is L from Death Note. My favourite non-anime character is Sansa from Game of Thrones.`}
-                </Typography>
-              </Grid>
-              <Grid item>
-                <Typography className={classes.text}>
                   {`First generation immigrant from the `}
                   <span>&nbsp;</span>
                   <img
@@ -101,7 +88,13 @@ const About = React.forwardRef(({ classes }, ref) => {
                     width={30}
                     height={30}
                   />
-                  {`Philippines.`}
+                  {`Philippines. `}
+                  {`I graduated with a 2019 B.C.S Honours from Carleton University.`}
+                </Typography>
+              </Grid>
+              <Grid item>
+                <Typography className={classes.text}>
+                  {`My favorite things: One Piece, Rimworld, Genshin Impact`}
                 </Typography>
               </Grid>
               <Grid item>

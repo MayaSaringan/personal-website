@@ -1,18 +1,18 @@
 {
   "descriptions": [
     {
+      "title": "money-watch",
+      "tags": ["react-native-web", "Firebase"],
+      "description": "Finance Management app. Features transaction entryand multiple bank accounts. Log in via Google, or browse anonymously. Actively being developed. Check it out!",
+      "preview": "/transactionsPreview.PNG",
+      "link": "https://money-watch-app.netlify.app/"
+    },
+    {
       "title": "meal-simple",
       "tags": ["react-native-web", "Express", "Firebase"],
       "description": "A to be mealplanner app with user accounts that will have ability to share recipes",
       "preview": "/mealsimplelight.png",
       "link": "https://github.com/MayaSaringan/meal-simple"
-    },
-    {
-      "title": "money-watch",
-      "tags": ["ReactJS", "Express", "Firebase"],
-      "description": "Finance Management app, featuring transaction categorization and tallying.",
-      "preview": "/moneyWatchPreview1.png",
-      "link": "https://github.com/MayaSaringan/money-watch"
     },
     {
       "title": "justDoIt",
