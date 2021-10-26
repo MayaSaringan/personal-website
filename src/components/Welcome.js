@@ -56,7 +56,7 @@ const Description = withTheme(
         <span className={classes.primaryColorText}>Software Developer</span>
         &nbsp;at&nbsp;
         <span className={classes.WMColor}>WarnerMedia, </span>
-        <span className={classes.YouiColor}>You.i TV Platform</span>! I like making random apps for myself sometimes.
+        <span className={classes.YouiColor}>You.i TV Platform</span>!
       </Typography>
     );
   })

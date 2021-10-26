@@ -3,23 +3,30 @@
     {
       "title": "money-watch",
       "tags": ["react-native-web", "Firebase"],
-      "description": "Finance Management app. Features transaction entryand multiple bank accounts. Log in via Google, or browse anonymously. Actively being developed. Check it out!",
+      "description": "Personal finance Management app. Featuring account management and data storage via Firebase Cloud Firestore. Actively being developed!",
       "preview": "/transactionsPreview.PNG",
-      "link": "https://money-watch-app.netlify.app/"
+      "link": "https://devmoneywatch.netlify.app/"
     },
     {
       "title": "meal-simple",
-      "tags": ["react-native-web", "Express", "Firebase"],
-      "description": "A to be mealplanner app with user accounts that will have ability to share recipes",
+      "tags": ["react-native-web", "Firebase"],
+      "description": "Share recipes and track nutritional value of your intake. Actively being developed!",
       "preview": "/mealsimplelight.png",
       "link": "https://github.com/MayaSaringan/meal-simple"
     },
     {
-      "title": "justDoIt",
-      "tags": ["React Native"],
-      "description": "To-do list app that stores items in local storage.",
+      "title": "react-native-scroll-context",
+      "tags": ["react-native"],
+      "description": "Provides a React Native context that makes it easier to manipulate the scroll offset of a ScrollView in the app. This is mostly intended for when you have a single root ScrollView.",
       "preview": null,
-      "link": "https://github.com/MayaSaringan/justDoIt"
+      "link": "https://github.com/MayaSaringan/react-native-scroll-context"
+    },
+    {
+      "title": "Valheim Food",
+      "tags": ["react-native-web"],
+      "description": "App displaying foods from the game Valheim. It allows for sorting based on health, stamina, duration, and even name, number of ingredients, and prep method!",
+      "preview": null,
+      "link": "https://github.com/MayaSaringan/valheim-food"
     },
     {
       "title": "Farm Fight",
@@ -27,20 +34,6 @@
       "description": "1v1 your friend and race to completely infect the other's farm whilst caring for your own.",
       "preview": "/farmFight.png",
       "link": "https://globalgamejam.org/2020/games/farm-fight-6"
-    },
-    {
-      "title": "Sims4 Pregnancy Mod",
-      "tags": ["Python", "Sims4", "Mod"],
-      "description": "My first game mod. Pregnancy mod to allow sims to repopulate in sims4. May be rendered non-functional, or obselete, depending on game updates.",
-      "preview": null,
-      "link": "https://github.com/MayaSaringan/Sims4-Pregnancy-Adoption-Mod"
-    },
-    {
-      "title": "BrowserBuddies",
-      "tags": ["Google Chrome extension", "ReactJS", "Express", "Firebase"],
-      "description": "Share tabs with your friends",
-      "preview": null,
-      "link": "https://devpost.com/software/browser-buddies"
     }
   ]
 }
