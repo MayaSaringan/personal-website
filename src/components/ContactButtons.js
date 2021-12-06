@@ -51,7 +51,7 @@ const Navbar = withTheme(
         </IconButton>
         <IconButton
           className={classes.contactButtonsWrapper}
-          href={"mailto:contact@mayasaringan.me"}
+          href={"mailto:mayas.saringan@gmail.com"}
           target="_blank"
         >
           <img

@@ -18,7 +18,7 @@
 
 ### Contact
 
-Maya Saringan - contact@mayasaringan.me
+Maya Saringan - mayas.saringan@gmail.com
 
 ### Acknowledgements
 
