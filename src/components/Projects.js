@@ -52,7 +52,10 @@ const Projects = React.forwardRef(({ classes }, ref) => {
                         );
                       })}
                     </Grid>
-                    <Typography variant="body1">{desc.description}</Typography>
+                    <Typography variant="body1">
+                      {desc.description} See at{" "}
+                      <Link href={desc.link}>{desc.link}</Link>
+                    </Typography>
                   </Grid>
                   {
                     <Hidden xsDown>

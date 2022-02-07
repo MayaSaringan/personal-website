@@ -81,15 +81,7 @@ const About = React.forwardRef(({ classes }, ref) => {
               </Grid>
               <Grid item>
                 <Typography variant="body1" className={classes.text}>
-                  {`First generation immigrant from the `}
-                  <span>&nbsp;</span>
-                  <img
-                    src="https://img.icons8.com/emoji/96/000000/philippines-emoji.png"
-                    width={30}
-                    height={30}
-                  />
-                  {`Philippines. `}
-                  {`I graduated with a 2019 B.C.S Honours from Carleton University.`}
+                  {`Graduated in 2019 Bachelor's Degree in Computer Science Honours from Carleton University with High Distinction.`}
                 </Typography>
               </Grid>
               <Grid item>

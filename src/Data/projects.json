@@ -25,8 +25,8 @@
       "title": "Valheim Food",
       "tags": ["react-native-web"],
       "description": "App displaying foods from the game Valheim. It allows for sorting based on health, stamina, duration, and even name, number of ingredients, and prep method!",
-      "preview": null,
-      "link": "https://github.com/MayaSaringan/valheim-food"
+      "preview": "/valheimFood.jpg",
+      "link": "https://valheimfood.netlify.app/"
     },
     {
       "title": "Farm Fight",
