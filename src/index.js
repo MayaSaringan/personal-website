@@ -9,5 +9,5 @@ ReactDOM.render(
       <Route exact path="/" component={App} />
     </Switch>
   </Router>,
-  document.getElementById("root")
+  document.getElementById("root"),
 );
