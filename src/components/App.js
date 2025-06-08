@@ -31,7 +31,7 @@ const App = () => {
         >
           {darkMode ? "☀️" : "🌙"}
         </button>
-        Welcome to mayasaringan.me :) - Maya Saringan
+        <span>Maya Saringan</span>
       </header>
       <main className="main-content">
         <div className="box">
