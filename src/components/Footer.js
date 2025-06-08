@@ -1,24 +1,22 @@
 import React from "react";
-import Grid from "@material-ui/core/Grid";
-import Container from "@material-ui/core/Container";
 
-import ContactButtons from "./ContactButtons";
+const Footer = ({
+  email = "mayas.saringan@gmail.com",
+  github = "https://github.com/MayaSaringan",
+}) => (
+  <footer className="site-footer">
+    <span>
+      Contact me at <a href={`mailto:${email}`}>{email}</a>
+    </span>
+    <br />
+    <span>
+      or follow me on <a href={github}>Github</a>!
+    </span>
+    <p>
+      Site was partially made with{" "}
+      <a href={"https://www.cursor.com/"}>Cursor AI</a>
+    </p>
+  </footer>
+);
 
-const Welcome = () => {
-  return (
-    <Container>
-      <Grid
-        container
-        alignItems="center"
-        justify="center"
-        direction="column"
-        spacing={5}
-      >
-        <Grid item>
-          <ContactButtons />
-        </Grid>
-      </Grid>
-    </Container>
-  );
-};
-export default Welcome;
+export default Footer;

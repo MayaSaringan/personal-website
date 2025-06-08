@@ -1,0 +1,552 @@
+.main-wrapper {
+  font-family: "Chivo Mono", monospace;
+  background: #fff;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 100vw;
+  font-size: 16pt;
+  align-items: center;
+}
+.site-header {
+  width: 100%;
+  position: relative;
+  display: flex;
+  text-align: center;
+  padding: 38px 0 32px 0;
+  letter-spacing: 1px;
+  border-bottom: 4px solid #111;
+  box-sizing: border-box;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+.main-content {
+  max-width: 1600px;
+  padding: 40px 32px 40px 32px;
+}
+.profile-card {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 24px;
+  margin-bottom: 0;
+  gap: 32px;
+  border-radius: 0;
+  gap: 0;
+  grid-gap: 0;
+}
+.profile-card-content {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+}
+.profile-img {
+  height: 500px;
+  object-fit: cover;
+  border: 2px solid #111;
+  border-radius: 0;
+}
+.profile-info {
+  flex: 1;
+  position: relative;
+}
+.unwrappable {
+  white-space: nowrap;
+}
+.section-title .netflix {
+  height: 36px;
+  object-fit: cover;
+  margin-left: 12px;
+}
+.profile-bio {
+  background: #fff;
+  border: 2px solid #111;
+  padding: 24px 24px 24px 24px;
+  margin-bottom: 10px;
+  font-size: 16pt;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+.profile-bio::before {
+  content: "";
+  position: absolute;
+  left: -18px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-top: 14px solid transparent;
+  border-bottom: 14px solid transparent;
+  border-right: 18px solid #fff;
+  filter: drop-shadow(-2px 0 0 #111);
+}
+.profile-tags {
+  display: block;
+  margin-bottom: 10px;
+  text-align: right;
+}
+.profile-reaction {
+  position: absolute;
+  bottom: -23px;
+  right: -23px;
+  font-size: 3rem;
+  z-index: 2;
+  pointer-events: none;
+}
+.columns {
+  display: flex;
+  gap: 0;
+  align-items: stretch;
+}
+.left-column {
+  flex: 0 0 60%;
+  max-width: 60%;
+  min-width: 0;
+}
+.right-column {
+  flex: 0 0 40%;
+  max-width: 40%;
+  min-width: 0;
+}
+.section {
+  padding: 20px 20px 20px 20px;
+  gap: 0;
+  grid-gap: 0;
+}
+.box {
+  border: 2px solid #111;
+  background: #fff;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  border-radius: 0;
+
+  box-shadow: none;
+}
+.left-column .box {
+  border-width: 0px 0 2px 2px;
+}
+.right-column .box {
+  border-width: 0px 2px 2px 2px;
+}
+.section-title {
+  font-family: "Atomic Age", system-ui;
+  font-size: 56px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  font-style: italic;
+  display: flex;
+  align-items: center;
+  min-height: 2.5em;
+  width: 100%;
+  text-align: left;
+  justify-content: left;
+  margin-bottom: 12px;
+}
+.profile-card .section-title {
+  justify-content: left;
+  flex-wrap: wrap;
+  width: "fit-content";
+  text-align: center;
+  justify-content: center;
+}
+.job {
+  margin-bottom: 24px;
+  gap: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.job-company {
+  gap: 12px;
+  display: flex;
+  margin-bottom: 12px;
+  width: 100%;
+}
+.company {
+  font-weight: bold;
+  font-size: 1.05rem;
+}
+.company.netflix {
+  top: 4px;
+  position: relative;
+  color: #e50914;
+  height: 46px;
+  object-fit: contain;
+}
+.company.tableau {
+  color: #1f6ab4;
+}
+.company.wb {
+  color: #0057b8;
+}
+.role {
+  margin-left: 8px;
+  font-style: italic;
+  font-size: 28pt;
+}
+.job-team {
+  margin-bottom: 2px;
+  font-weight: 800;
+}
+.job-desc {
+}
+.degree-info {
+  margin-top: 6px;
+}
+.university {
+  font-weight: bold;
+  margin-right: 6px;
+  font-size: 24pt;
+}
+.degree {
+  font-style: italic;
+  font-size: 24pt;
+}
+.distinction {
+  margin-left: 6px;
+  font-size: 16pt;
+}
+.about-text {
+  line-height: 1.6;
+}
+.side-list,
+.facts-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.side-list li,
+.facts-list li {
+  margin-bottom: 12px;
+}
+.site-footer {
+  width: 100%;
+  text-align: center;
+  padding: 38px 0 32px 0;
+  border-top: 4px solid #111;
+  background: #fff;
+  box-sizing: border-box;
+  margin-top: 80px;
+}
+.site-footer a {
+  text-decoration: underline;
+}
+
+/* Add spacing between inner sections in the left and right column boxes */
+.left-column .section > *:not(:last-child),
+.right-column .section > *:not(:last-child) {
+  margin-bottom: 28px;
+}
+
+/* Responsive styles */
+@media (max-width: 1300px) {
+  .spacer {
+    display: none;
+  }
+  .city-skyline-img {
+    object-fit: contain;
+    overflow: scroll;
+    display: none !important;
+  }
+
+  .job-company {
+    flex-wrap: wrap !important;
+    white-space: wrap !important;
+  }
+}
+@media (max-width: 1000px) {
+  .columns {
+    flex-direction: column;
+    gap: 0;
+  }
+  .left-column,
+  .right-column {
+    max-width: 100%;
+    flex: 1 1 100%;
+    width: 100%;
+  }
+  .left-column {
+    order: 1;
+  }
+  .right-column {
+    order: 2;
+  }
+  .profile-card-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+  }
+  .profile-img {
+    height: 320px;
+    width: 100%;
+    max-width: 220px;
+    margin-bottom: 12px;
+  }
+  .profile-info {
+    width: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .profile-bio {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+  .profile-bio::before {
+    left: 50%;
+    top: -18px;
+    transform: translateX(-50%);
+    border-top: none;
+    border-bottom: 18px solid #fff;
+    border-left: 14px solid transparent;
+    border-right: 14px solid transparent;
+    width: 0;
+    height: 0;
+    filter: drop-shadow(0 -2px 0 #111);
+  }
+  .unwrappable {
+    white-space: normal !important;
+  }
+  .box {
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+  }
+}
+
+/* Use for elements that should have the Faster One font */
+.faster-one-regular {
+  font-family: "Faster One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.profile-message span.icon-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #e50914;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(229, 9, 20, 0.08);
+  font-size: 1.5rem;
+  margin: 0 4px;
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    box-shadow 0.2s;
+}
+.profile-message span.icon-button:hover {
+  background: #ffe6ea;
+  box-shadow: 0 4px 16px rgba(229, 9, 20, 0.15);
+}
+
+.icon-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #e50914;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(229, 9, 20, 0.08);
+  font-size: 1.5rem;
+  margin: 0 4px;
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    box-shadow 0.2s;
+  padding: 0;
+}
+.icon-button img {
+  width: 24px;
+  height: 24px;
+  display: block;
+  margin: 0 auto;
+  filter: invert(18%) sepia(99%) saturate(7493%) hue-rotate(353deg)
+    brightness(97%) contrast(119%);
+  transition: filter 0.2s;
+}
+.icon-button:hover img {
+  filter: invert(36%) sepia(99%) saturate(7493%) hue-rotate(353deg)
+    brightness(97%) contrast(119%);
+}
+
+.icon-button.link-btn {
+  border: none;
+  background: transparent;
+  box-shadow: none;
+  padding: 0;
+}
+.icon-button.link-btn img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+  filter: invert(18%) sepia(99%) saturate(7493%) hue-rotate(353deg)
+    brightness(97%) contrast(119%);
+  transition:
+    background 0.2s,
+    box-shadow 0.2s,
+    filter 0.2s;
+}
+.icon-button.link-btn:hover img {
+  background: rgba(229, 9, 20, 0.12);
+  box-shadow: 0 4px 16px rgba(229, 9, 20, 0.15);
+  filter: invert(36%) sepia(99%) saturate(7493%) hue-rotate(353deg)
+    brightness(97%) contrast(119%);
+}
+
+.city-skyline {
+  width: 100%;
+  height: 40px;
+  display: block;
+  margin-top: 24px;
+  opacity: 0.7;
+}
+
+.city-skyline-img {
+  width: 100%;
+  max-width: 100%;
+  display: block;
+  position: absolute;
+  right: -50px;
+  bottom: -10px;
+  margin: 0;
+  object-fit: cover;
+  opacity: 0.8;
+  pointer-events: none;
+  z-index: 1;
+  min-height: 350px;
+  overflow: auto;
+}
+
+.spacer {
+  height: 420px;
+  width: 100%;
+}
+
+.theme-toggle {
+  position: absolute;
+  top: 16px;
+  right: 32px;
+  z-index: 10;
+  background: #fff;
+  color: #111;
+  border: 2px solid #bbb;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition:
+    background 0.2s,
+    color 0.2s,
+    border 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.theme-toggle:hover {
+  background: #ffe6ea;
+  color: #e50914;
+  border-color: #e50914;
+}
+
+.dark-mode {
+  background: #181a1b;
+  color: #f3f3f3;
+}
+.dark-mode .site-header,
+.dark-mode .site-footer {
+  background: #232526;
+  color: #f3f3f3;
+  border-color: #333;
+}
+.dark-mode .main-content {
+  background: #181a1b;
+}
+.dark-mode .box,
+.dark-mode .section,
+.dark-mode .profile-bio {
+  background: #232526;
+  color: #f3f3f3;
+  border-color: #333;
+}
+.dark-mode .profile-bio::before {
+  border-right: 18px solid #232526;
+  filter: drop-shadow(-2px 0 0 #333);
+}
+.dark-mode .profile-message .icon-button,
+.dark-mode .profile-message .icon-button.link-btn {
+  background: #232526;
+  border-color: #444;
+}
+.dark-mode .profile-message .icon-button:hover,
+.dark-mode .profile-message .icon-button.link-btn:hover {
+  background: #333;
+}
+.dark-mode .city-skyline-img {
+  filter: brightness(0.7) invert(0.9);
+  opacity: 0.6;
+}
+
+.dark-mode a {
+  color: #4fd1ff;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+.dark-mode a:hover {
+  color: #90e0ff;
+}
+.icon-button.resume-btn {
+  min-width: 0;
+  height: 40px;
+  border-radius: 20px;
+  background: #fff;
+  color: #e50914;
+  border: 2px solid #e50914;
+  font-size: 1rem;
+  font-family: inherit;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 4px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(229, 9, 20, 0.08);
+  transition:
+    background 0.2s,
+    color 0.2s,
+    border 0.2s;
+  text-decoration: none;
+  padding: 0 24px;
+  white-space: nowrap;
+}
+.icon-button.resume-btn:hover {
+  background: #ffe6ea;
+  color: #b0060f;
+  border-color: #b0060f;
+}
+.profile-buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+}

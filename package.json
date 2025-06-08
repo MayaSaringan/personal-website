@@ -14,7 +14,6 @@
     "@testing-library/react": "^9.4.0",
     "@testing-library/user-event": "^7.2.1",
     "bootstrap": "^4.4.1",
-    "prettier": "^2.1.2",
     "react": "^16.12.0",
     "react-bootstrap": "^1.0.0-beta.16",
     "react-dom": "^16.12.0",
@@ -29,13 +28,15 @@
     "typeface-poppins": "0.0.72"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "export SET NODE_OPTIONS=--openssl-legacy-provider && react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "format": "prettier --write \"**/*.+(js|jsx|json|css|md)\""
+    "format": "prettier --write \"**/*.+(js|jsx|json|css|md)\"",
+    "lint": "eslint src",
+    "lint:fix": "eslint src --fix"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -54,11 +55,14 @@
   },
   "homepage": "http://mayasaringan.github.io/",
   "devDependencies": {
+    "esl": "^11.2.1",
+    "eslint": "^6.8.0",
     "eslint-config-google": "^0.14.0",
-    "eslint-config-prettier": "^6.13.0",
+    "eslint-config-prettier": "^6.15.0",
     "eslint-plugin-prettier": "^3.1.4",
-    "eslint-plugin-react": "^7.21.4",
-    "gh-pages": "^2.2.0"
+    "eslint-plugin-react": "^7.37.5",
+    "gh-pages": "^2.2.0",
+    "prettier": "^3.5.3"
   },
   "prettier": {
     "tabWidth": 2

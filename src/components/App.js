@@ -1,78 +1,61 @@
-import React, { useContext, useState, useEffect } from "react";
-import { ThemeProvider } from "@material-ui/core/styles";
-import Paper from "@material-ui/core/Paper";
-import Container from "@material-ui/core/Container";
-import Grid from "@material-ui/core/Grid";
-import CssBaseline from "@material-ui/core/CssBaseline";
-import Navbar, { NavbarContext } from "./Navbar";
-import Welcome from "./Welcome";
-import About from "./About";
-import Work from "./Work";
-import Projects from "./Projects";
+import React, { useState } from "react";
+import "./App.css";
+import ProfileCard from "./ProfileCard";
+import ExperienceSection from "./ExperienceSection";
+import DegreeSection from "./DegreeSection";
+import AboutSection from "./AboutSection";
+import SideProjectsSection from "./SideProjectsSection";
+import RandomFactsSection from "./RandomFactsSection";
 import Footer from "./Footer";
-import ThemeContext, { lightTheme, darkTheme } from "./theme/Theme";
-import CircularProgress from "@material-ui/core/CircularProgress";
-import Page from "./Page";
+import { aboutText, randomFacts } from "../Data/about";
+import { degree } from "../Data/degree";
+import { profile } from "../Data/profile";
+import { jobs } from "../Data/work";
+import projectsData from "../Data/projects.json";
+
+const sideProjects = projectsData.descriptions.map((p) => ({
+  name: p.title,
+  desc: p.description,
+  link: p.link,
+}));
 
 const App = () => {
-  const { light } = useContext(ThemeContext);
-  const [doneLoading, setDoneLoading] = useState(false);
-  useEffect(() => {
-    setTimeout(() => {
-      setDoneLoading(!doneLoading);
-    }, 500);
-  }, []);
+  const [darkMode, setDarkMode] = useState(false);
   return (
-    <ThemeProvider theme={light ? lightTheme : darkTheme}>
-      {doneLoading ? <Loaded /> : <Loading />}
-    </ThemeProvider>
+    <div className={`main-wrapper${darkMode ? " dark-mode" : ""}`}>
+      <header className="site-header">
+        <button
+          className="theme-toggle"
+          onClick={() => setDarkMode((d) => !d)}
+          aria-label="Toggle dark mode"
+        >
+          {darkMode ? "☀️" : "🌙"}
+        </button>
+        Welcome to mayasaringan.me :) - Maya Saringan
+      </header>
+      <main className="main-content">
+        <div className="box">
+          <ProfileCard {...profile} />
+        </div>
+        <div className="columns">
+          <div className="column left-column">
+            <div className="box">
+              <ExperienceSection jobs={jobs} />
+              <DegreeSection {...degree} />
+              <AboutSection aboutText={aboutText} />
+            </div>
+          </div>
+          <div className="column right-column">
+            <div className="box">
+              <SideProjectsSection projects={sideProjects} />
+              <RandomFactsSection facts={randomFacts} />
+            </div>
+          </div>
+        </div>
+      </main>
+      <Footer />
+    </div>
   );
-};
-const Loaded = () => {
-  const welcomeRef = React.createRef();
-  const aboutRef = React.createRef();
-  const projectsRef = React.createRef();
-  const workRef = React.createRef();
-  const [appbarHeight, setAppbarHeight] = useState(null);
-  return (
-    <Paper>
-      <NavbarContext.Provider value={{ appbarHeight, setAppbarHeight }}>
-        <Navbar />
-        <Container maxWidth={"md"}>
-          <Grid alignItems="center" flexDirection="column">
-            <CssBaseline>
-              <Welcome aboutRef={aboutRef} ref={welcomeRef} />
-              <About ref={aboutRef} />
-              <Work ref={workRef} />
-              <Projects ref={projectsRef} />
-              <Footer />
-            </CssBaseline>
-          </Grid>
-        </Container>
-      </NavbarContext.Provider>
-    </Paper>
-  );
-};
-const CircularIndeterminate = () => {
-  const loadingRef = React.createRef();
-  return (
-    <Page fadeIn fadeOut={false} ref={loadingRef}>
-      <CircularProgress color="secondary" />
-    </Page>
-  );
-};
-const Loading = () => {
-  return <CircularIndeterminate />;
 };
 
-const Wrapper = () => {
-  const [light, setLight] = useState(false);
-  const switchTheme = () => setLight(!light);
-
-  return (
-    <ThemeContext.Provider value={{ light, switchTheme }}>
-      <App />
-    </ThemeContext.Provider>
-  );
-};
-export default Wrapper;
+export default App;
